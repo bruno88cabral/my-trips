@@ -1,0 +1,17 @@
+{
+    "name": "Boilerplate - avançado",
+    "short_name": "boilerplate",
+    "start_url": "/",
+    "display": "fullscreen",
+    "description": "boilerplate avançado para criar novos projetos com dependencias padronizadas",
+    "theme_color": "#06092B",
+    "background_color": "#06092B",
+    "icons": [
+        {
+            "src": "/image/react-512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any maskable"
+        }
+    ]
+}
