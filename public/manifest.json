@@ -1,9 +1,9 @@
 {
-    "name": "Boilerplate - avançado",
-    "short_name": "boilerplate",
+    "name": "my trips",
+    "short_name": "my trips",
     "start_url": "/",
     "display": "fullscreen",
-    "description": "boilerplate avançado para criar novos projetos com dependencias padronizadas",
+    "description": "projeto que mostra minha viagens",
     "theme_color": "#06092B",
     "background_color": "#06092B",
     "icons": [
