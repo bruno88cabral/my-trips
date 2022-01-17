@@ -1,4 +1,7 @@
 # my-trips
 =======
-this is boilerplate to create pwa app
+Projeto que mostra lugares que eu gostaria de conhecer.
 
+## TODO
+=======
+- melhorar a configuração do next-seo.
