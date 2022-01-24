@@ -1,7 +1,8 @@
 import { MapContainer, TileLayer, Marker, MapConsumer } from 'react-leaflet'
 import { useRouter } from 'next/router'
 import * as S from './styles'
-import L from 'leaflet'
+import L, { divIcon } from 'leaflet'
+import { Github } from '@styled-icons/entypo-social/Github'
 
 type Place = {
   id: string
@@ -41,22 +42,18 @@ const setMinZoomOnMobile = (map: MapConsumerProps) => {
 const CustomTileLayer = () => {
   return MAPBOX_API_KEY ? (
     <TileLayer
-      attribution='&copy; <a href="https://apps.mapbox.com/feedback">Mapbox</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url={`https://api.mapbox.com/styles/v1/${MAPBOX_USERID}/${MAPBOX_STYLEID}/tiles/256/{z}/{x}/{y}@2x?access_token=${MAPBOX_API_KEY}`}
     />
   ) : (
-    <TileLayer
-      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    />
+    <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
   )
 }
 
 const markerIcon = new L.Icon({
-  iconUrl: 'image/marker-2.png',
+  iconUrl: 'image/marker.png',
   iconSize: [25, 25],
   iconAnchor: [20, 20],
-  popupAnchor: [0, -40]
+  popupAnchor: [0, 0]
 })
 
 const Map = ({ places }: MapProps) => {
@@ -64,10 +61,10 @@ const Map = ({ places }: MapProps) => {
   return (
     <S.MapWrapper>
       <MapContainer
-        center={[0, 0]}
-        zoom={3}
+        center={[25, 0]}
+        zoom={2.3}
+        minZoom={2.3}
         style={{ height: '100%', width: '100%' }}
-        minZoom={3}
         maxBounds={[
           [180, -180],
           [-180, 180]
