@@ -7,7 +7,6 @@ import * as S from './styles'
 const ContactMe = () => {
   return (
     <S.Wrapper>
-      <h2>contact me</h2>
       <S.Grid>
         <Link href="https://github.com/bruno88cabral" passHref>
           <a target="_blank">

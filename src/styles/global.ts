@@ -1,5 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
 
+const isMobile = () => {
+  if (typeof window !== 'undefined') {
+    return window.innerWidth < 736
+  }
+}
+
 const GlobalStyles = createGlobalStyle`
     :root {
         --highlight: #00ADB5;
@@ -7,11 +13,11 @@ const GlobalStyles = createGlobalStyle`
         --off-black: #393E46;
         --white: #eee;
 
-        --container: 65%;
+        --container: ${isMobile() ? '80%' : '65%'};
 
-        --small: 1.5rem;
-        --medium: 3rem;
-        --large: 5rem;
+        --small: ${isMobile() ? '1.8rem' : '2rem'};
+        --medium: ${isMobile() ? '2rem' : '3rem'};
+        --large: ${isMobile() ? '3rem' : '5rem'};
         
     }
 
