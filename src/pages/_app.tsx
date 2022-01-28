@@ -10,6 +10,10 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <meta
+          name="google-site-verification"
+          content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICARION}
+        />
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="./public/image/boilerplate.png" />
         <link
